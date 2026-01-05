@@ -1,0 +1,153 @@
+/* Variables de color */
+:root {
+    --azul-oscuro: #1a3a5f;
+    --azul-medio: #4a90e2;
+    --azul-claro: #d1e8ff;
+    --blanco: #ffffff;
+    --gris-texto: #333333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--gris-texto);
+    line-height: 1.8;
+    background-color: #f4f7f9;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--azul-oscuro);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header con fondo semi-transparente */
+.hero {
+    background: url(https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.2zFGW3Oc6j0zzV8EkxA-gQHaE8%3Fpid%3DApi&sp=1767632274T853d3a7c7ff24acd48eaee2b77b61655e4a97027b8e699f403c7a845d1ee2895) no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    background-color: rgba(26, 58, 95, 0.6); /* Azul oscuro con transparencia */
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+}
+
+.hero-overlay h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Sección "¿Qué son?" con imagen a la derecha */
+.section-flex {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 50px 0;
+}
+
+.text-content {
+    flex: 2;
+    text-align: justify;
+    font-size: 1.1rem;
+}
+
+.image-content {
+    flex: 1;
+}
+
+.image-content img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Grid de Trastornos */
+.grid-tca {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--azul-claro);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid var(--azul-medio);
+    text-align: justify;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* Video */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin-top: 20px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Sección de Ayuda */
+.help-section {
+    background-color: var(--azul-oscuro);
+    color: white;
+    padding: 50px;
+    border-radius: 20px;
+    margin: 50px 0;
+}
+
+.help-section h2 {
+    color: var(--azul-claro);
+}
+
+.help-box button {
+    background-color: var(--azul-medio);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.help-box button:hover {
+    background-color: #357abd;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #e1e8ef;
+    font-size: 0.9rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .section-flex {
+        flex-direction: column;
+    }
+}
